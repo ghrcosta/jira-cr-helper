@@ -1,0 +1,56 @@
+.panel {
+  display: inline-block;
+  vertical-align: top;
+}
+.panel_left {
+  width: 40%;
+  margin-right: 20px;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.xlarge_text {
+  font-size: x-large;
+}
+
+.large_text {
+  font-size: larger;
+}
+
+.img_base {
+  width: 36px;
+}
+
+.about_text {
+  display: block;
+  margin-top: 5px;
+}
+
+.item_list > button:not(:first-child) {
+  margin-left: 5px;
+}
+
+#project {
+  vertical-align: text-bottom;
+}
+
+#button_create_component {
+  margin-top: 2px;
+}
+
+.button_selected {
+  background: deepskyblue;
+  border-radius: 3px;
+  border-color: black;
+}
+
+#button_delete_component {
+  margin-left: 5px;
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Jira CR Helper",
+  "description": "Makes it easier to create Jira CRs with default options",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "128": "/images/jira-shortcut_128.png"
+  },
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "/images/jira-shortcut_128.png"
+    }
+  },
+  "options_page": "options.html"
+}

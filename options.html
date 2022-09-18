@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jira CR Helper Settings</title>
+    <link rel="icon" href="/images/jira-shortcut_128.png">
+    <script src="options.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body class="font_base">
+    <div class="panel panel_left">
+      <img class="img_base" src="images/jira-shortcut_128.png">
+      <span class="title xlarge_text">Jira CR Helper</span><br>
+      <span class="about_text">Browser extension to simplify creating Jira CRs with default options.</span>
+      <br><br>
+
+      <span class="large_text bold">How to use</span><br>
+      <span class="about_text">
+        This extension helps create Jira CRs with some default values. See more information
+        <a href="https://confluence.atlassian.com/jirakb/how-to-create-issues-using-direct-html-links-in-jira-server-159474.html" target="_blank">here</a>.
+        <br>
+        Notes:
+        <ul>
+          <li>Jira base URL and CR types are hardcoded.</li>
+          <li>Components' name must match the name in Jira (case sensitive).</li>
+          <li>You can set a default description for each component, but note that "Bug" and "Defect" CRs, due to their nature, won't have the default description.</li>
+        </ul>
+      </span>
+      <br><br>
+
+      <span class="large_text bold">License</span><br>
+      <span class="about_text">
+        <a href="https://github.com/ghrcosta/jira-cr-helper" target="_blank">This extension</a> is licensed under 
+        <a href="https://github.com/ghrcosta/jira-cr-helper/blob/main/LICENSE" target="_blank">MIT License</a>
+      </span>
+
+      <span class="about_text">
+        Icons from <a href="https://materialdesignicons.com" target="_blank">Material Design Icons</a> are licensed under
+        <a href="https://dev.materialdesignicons.com/license" target="_blank">Apache 2.0 License</a>
+        <ul>
+          <li><a href="https://materialdesignicons.com/icon/alert" target="_blank">alert</a></li>
+          <li><a href="https://materialdesignicons.com/icon/alert-circle" target="_blank">alert-circle</a></li>
+          <li><a href="https://materialdesignicons.com/icon/cog" target="_blank">cog</a></li>
+        </ul>
+      </span>
+
+      <span class="about_text">
+        Icons from <a href="https://icons8.com" target="_blank">Icons8</a> are licensed under
+        <a href="https://icons8.com/license" target="_blank">Universal Multimedia Licensing Agreement for Icons8</a>
+        <ul>
+          <li><a href="https://icons8.com/icons/set/jira" target="_blank">jira</a></li>
+          <li><a href="https://icons8.com/icons/set/shortcut" target="_blank">shortcut</a></li>
+        </ul>
+      </span>
+    </div>
+    <div class="panel panel_right">
+      <span class="bold">Jira base URL</span>
+      <span id="jira_url_prefix" class="inline_parameter_value"></span>
+      <br><br>
+
+      <span class="bold">Project ID</span>
+      <input type="text" id="project" name="project" placeholder="00000">
+      <br><br>
+  
+      <span class="bold">Components & Description</span><br>
+      <button id="button_create_component">
+        <span class="font_base">Create New</span>
+      </button>
+      <br><br>
+  
+      <div id="component_list_area" class="item_list"></div><br>
+  
+      <span>Component:</span>
+      <span id="component" class="inline_parameter_value"></span>
+      <button id="button_delete_component" hidden>
+        <span class="font_base">Delete component</span>
+      </button>
+      <br>
+      <span>Default description:</span><br>
+      <textarea id="description" cols="80" rows="40" disabled></textarea>
+  
+      <br><br>
+      <button id="button_save">
+        <span class="font_base">Save</span>
+      </button>
+    </div>
+  </body>
+</html>

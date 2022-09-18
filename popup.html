@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body class="font_base">
+    <img class="svg_base" src="images/jira-shortcut_128.png">
+    <span class="title">Jira CR Helper</span>
+    <img id="button_settings" class="svg_base" src="images/cog.svg" title="Settings"><br>
+    <hr class="divider">
+
+    <div class="parameter">
+      <span class="category">Project ID</span>
+      <span id="project" class="inline_parameter_value"></span>
+      <img id="project_alert" class="svg_base" src="images/alert_circle_red.svg" title="Cannot create CR with invalid project ID" hidden>
+    </div>
+
+    <div class="parameter">
+      <span class="category">Type</span><br>
+      <div class="option_list center_horizontally">
+        <input type="radio" name="type" id="bug" value="1"><label for="bug">Bug</label>
+        <input type="radio" name="type" id="task" value="2"><label for="task">Task</label>
+        <input type="radio" name="type" id="story" value="3" checked><label for="story">Story</label>
+      </div>
+      <div class="option_list center_horizontally">
+        <input type="radio" name="type" id="defect" value="4"><label for="defect">Defect</label>
+        <input type="radio" name="type" id="eng_work" value="5"><label for="eng_work">Engineering Work</label>
+      </div>
+    </div>
+
+    <div class="parameter">
+      <span class="category">Priority</span><br>
+      <div class="option_list center_horizontally">
+        <input type="radio" name="priority" id="p1" value="1"><label for="p1">1</label>
+        <input type="radio" name="priority" id="p2" value="2"><label for="p2">2</label>
+        <input type="radio" name="priority" id="p3" value="3" checked><label for="p3">3</label>
+        <input type="radio" name="priority" id="p4" value="4"><label for="p4">4</label>
+        <input type="radio" name="priority" id="p5" value="5"><label for="p5">5</label>
+      </div>
+    </div>
+
+    <div class="parameter">
+      <span class="category">Component</span>
+      <img id="component_bug_alert" class="svg_base" src="images/alert_yellow.svg" title="Bug/Defect won't include default description" hidden><br>
+      <div class="option_list center_horizontally">
+        <select id="component" class="font_base">
+          <option value="">None</option>
+        </select>
+      </div>
+    </div>
+
+    <button id="button_go_to_jira" class="center_horizontally font_base">
+      <span">Go to JIRA</span>
+    </button>
+  </body>
+</html>

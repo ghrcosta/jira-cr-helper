@@ -1,0 +1,42 @@
+body {
+  white-space: nowrap;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.center_horizontally {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.svg_base {
+  width: 24px;
+  vertical-align: text-top;
+}
+
+.divider {
+  border-top: 3px solid #bbb;
+}
+
+.parameter {
+  margin-top: 15px;
+}
+
+.category {
+  font-weight: bold;
+  line-height: 30px;
+  cursor: default;
+}
+
+#button_settings {
+  float: right;
+}
+
+.option_list > input:not(:first-child) {
+  margin-left: 15px;
+}
+
+#button_go_to_jira {
+  margin-top: 25px;
+}
