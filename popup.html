@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="common.js"></script>
     <script src="popup.js"></script>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="popup.css">
@@ -10,12 +11,6 @@
     <span class="title">Jira CR Helper</span>
     <img id="button_settings" class="svg_base" src="images/cog.svg" title="Settings"><br>
     <hr class="divider">
-
-    <div class="parameter">
-      <span class="category">Project ID</span>
-      <span id="project" class="inline_parameter_value"></span>
-      <img id="project_alert" class="svg_base" src="images/alert_circle_red.svg" title="Cannot create CR with invalid project ID" hidden>
-    </div>
 
     <div class="parameter">
       <span class="category">Type</span><br>
@@ -43,7 +38,7 @@
 
     <div class="parameter">
       <span class="category">Component</span>
-      <img id="component_bug_alert" class="svg_base" src="images/alert_yellow.svg" title="Bug/Defect won't include default description" hidden><br>
+      <img id="component_bug_alert" class="svg_base" src="images/alert_yellow.svg" title="Bug/Defect don't include default description" hidden><br>
       <div class="option_list center_horizontally">
         <select id="component" class="font_base">
           <option value="">None</option>

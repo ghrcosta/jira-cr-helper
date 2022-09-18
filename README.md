@@ -1,6 +1,6 @@
 # jira-cr-helper
 
-Browser extension to simplify creating Jira CRs with default options. Note that
+Browser extension to simplify creating Jira CRs with default values. Note that
 some of the variables are hardcoded, you will need to change them before using
 this extension.
 

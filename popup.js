@@ -1,13 +1,4 @@
-const JIRA_URL_PREFIX="http://jira.atlassian.com"
 let jiraUrl = null
-
-
-const KEY_PROJECT="KEY_PROJECT"
-const PROJECT_DEFAULT="00000"
-let project = null
-
-
-const KEY_COMPONENT_LIST="KEY_COMPONENT_LIST"
 let componentList = []
 
 
@@ -17,23 +8,13 @@ window.onload = function() {
     chrome.tabs.create({ url: "options.html" })
   })
 
-  // Load initial value for project
-  chrome.storage.sync.get({KEY_PROJECT}, function(fetchResult){
-    project = (fetchResult.KEY_PROJECT !== KEY_PROJECT) ? fetchResult.KEY_PROJECT : ""
-    document.getElementById("project").innerText = project
-
-    if (!project || project.trim().length == 0 || project === PROJECT_DEFAULT) {
-      document.getElementById("button_go_to_jira").disabled = true
-      document.getElementById("project_alert").hidden = false
-    }
-  })
-
-  chrome.storage.sync.get({KEY_COMPONENT_LIST}, function(fetchResult){
+  // Load component list
+  chrome.storage.sync.get({KEY_COMPONENT_LIST: []}, function(fetchResult){
     componentList = fetchResult.KEY_COMPONENT_LIST
     buildComponentList()
   })
 
-  // Setup "Go to JIRA" button
+  // Setup notification warning when selecting Bug/Defect CR types
   for (const radio of document.querySelectorAll('input[name="type"]')) {
     radio.addEventListener("change", async () => {
       const issueType = document.querySelector('input[name="type"]:checked').value
@@ -48,6 +29,9 @@ window.onload = function() {
 }
 
 
+/**
+ * Creates the dropdown menu for components.
+ */
 function buildComponentList() {
   const componentSelector = document.getElementById("component")
 
@@ -60,11 +44,15 @@ function buildComponentList() {
 }
 
 
+/**
+ * "Go to Jira" button action.
+ * Parses the choosen parameters, creates the Jira URL and opens it in a new tab.
+ */
 function goToJira() {
   const issueType = document.querySelector('input[name="type"]:checked').value
   const priority = document.querySelector('input[name="priority"]:checked').value
 
-  let jiraUrl = JIRA_URL_PREFIX+"/secure/CreateIssueDetails!init.jspa?pid="+project+"&issuetype="+issueType+"&priority="+priority
+  let jiraUrl = JIRA_URL_PREFIX+"/secure/CreateIssueDetails!init.jspa?pid="+PROJECT_ID+"&issuetype="+issueType+"&priority="+priority
   
   const componentSelectedName = document.getElementById("component").value
   let componentSelected = null
@@ -88,6 +76,11 @@ function goToJira() {
 }
 
 
+/**
+ * Handles special characters in the description text.
+ * @param {string} text Description to parse
+ * @returns Description text with special characters replaces.
+ */
 function parseDescription(text) {
   return text.trim().replace(/\n/g, "%0A")  // HTML links don't work with \n
 }

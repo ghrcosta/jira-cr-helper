@@ -19,7 +19,7 @@ body {
   border-top: 3px solid #bbb;
 }
 
-.parameter {
+.parameter:not(:first-of-type) {
   margin-top: 15px;
 }
 
