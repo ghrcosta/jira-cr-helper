@@ -12,6 +12,10 @@ body {
 
 .svg_base {
   width: 24px;
+  vertical-align: bottom;
+}
+
+#description_bug_alert {
   vertical-align: text-top;
 }
 
@@ -35,6 +39,10 @@ body {
 
 .option_list > input:not(:first-child) {
   margin-left: 15px;
+}
+
+.text_disabled {
+  color: gray;
 }
 
 #button_go_to_jira {

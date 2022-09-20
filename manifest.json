@@ -1,7 +1,7 @@
 {
   "name": "Jira CR Helper",
   "description": "Simplifies creating Jira CRs with default values",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "manifest_version": 3,
   "icons": {
     "128": "/images/jira-shortcut_128.png"

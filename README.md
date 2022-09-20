@@ -13,6 +13,19 @@ this extension.
 
 
 
+## Edits required
+
+* common.js
+  * Jira base URL
+  * Project ID
+* popup.html
+  * List of CR types and their IDs
+  * List of priorities and their IDs
+* popup.js
+  * CR types that must not show default description
+
+
+
 ## Improvement ideas
 
 Not sure if I'll ever do any of these, but...

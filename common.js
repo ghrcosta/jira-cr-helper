@@ -1,5 +1,5 @@
 const JIRA_URL_PREFIX="http://jira.atlassian.com"
 const PROJECT_ID="12345"
 
-// Used to read/write components to Chrome storage
-const KEY_COMPONENT_LIST="KEY_COMPONENT_LIST"
+// Used to read/write descriptions to Chrome storage
+const KEY_DESCRIPTION_LIST="KEY_DESCRIPTION_LIST"

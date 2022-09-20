@@ -14,14 +14,19 @@
 
     <div class="parameter">
       <span class="category">Type</span><br>
+      <!-- If you change type IDs/values here, check if they are correct in popup.js as well -->
       <div class="option_list center_horizontally">
         <input type="radio" name="type" id="bug" value="1"><label for="bug">Bug</label>
-        <input type="radio" name="type" id="task" value="2"><label for="task">Task</label>
-        <input type="radio" name="type" id="story" value="3" checked><label for="story">Story</label>
+        <input type="radio" name="type" id="improvement" value="4"><label for="improvement">Improvement</label>
+        <input type="radio" name="type" id="task" value="3"><label for="task">Task</label>
       </div>
       <div class="option_list center_horizontally">
-        <input type="radio" name="type" id="defect" value="4"><label for="defect">Defect</label>
-        <input type="radio" name="type" id="eng_work" value="5"><label for="eng_work">Engineering Work</label>
+        <input type="radio" name="type" id="defect" value="5"><label for="defect">Defect</label>
+        <input type="radio" name="type" id="eng_work" value="22"><label for="eng_work">Engineering Work</label>
+      </div>
+      <div class="option_list center_horizontally">
+        <input type="radio" name="type" id="story" value="70" checked><label for="story">Story</label>
+        <input type="radio" name="type" id="epic" value="74"><label for="epic">Epic</label>
       </div>
     </div>
 
@@ -37,10 +42,10 @@
     </div>
 
     <div class="parameter">
-      <span class="category">Component</span>
-      <img id="component_bug_alert" class="svg_base" src="images/alert_yellow.svg" title="Bug/Defect don't include default description" hidden><br>
+      <span class="category" id="description_title">Default description</span>
+      <img id="no_description_alert" class="svg_base" src="images/alert_yellow.svg" title="Bug/Defect/Epic doesn't include default description" hidden><br>
       <div class="option_list center_horizontally">
-        <select id="component" class="font_base">
+        <select id="description" class="font_base">
           <option value="">None</option>
         </select>
       </div>

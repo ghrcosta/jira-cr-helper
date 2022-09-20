@@ -47,7 +47,7 @@ ul {
   vertical-align: text-bottom;
 }
 
-#button_create_component {
+#button_create_description {
   margin-top: 2px;
 }
 
@@ -57,6 +57,10 @@ ul {
   border-color: black;
 }
 
-#button_delete_component {
+#description_text {
+  margin-top: 4px;
+}
+
+#button_delete_description {
   margin-left: 5px;
 }

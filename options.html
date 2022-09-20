@@ -24,14 +24,9 @@
           via query parameters. See more information
           <a href="https://confluence.atlassian.com/jirakb/how-to-create-issues-using-direct-html-links-in-jira-server-159474.html" target="_blank">here</a>.
           <br><br>
-          Jira base URL, Project ID and CR types are all hardcoded since they almost never change. Each component can have a
-          default description, but both are optional.
-          <br><br>
-          Notes:
-          <ul>
-            <li>Components' name must match the name in Jira (case sensitive).</li>
-            <li>"Bug" and "Defect" CRs, due to their nature, won't have the default description.</li>
-          </ul>
+          Jira base URL, Project ID and CR types are all hardcoded since they almost never change. You can also add a
+          default description, but it's optional. Note that "Bug", "Defect" and "Epic" CRs, due to their nature, won't
+          have the default description.
         </span>
       </div>
       <br><br>
@@ -70,22 +65,20 @@
       <span id="project" class="inline_parameter_value"></span>
       <br><br>
   
-      <span class="bold">Components & Description</span><br>
-      <button id="button_create_component">
+      <span class="bold">Default description</span><br>
+      <button id="button_create_description">
         <span class="font_base">Create New</span>
       </button>
       <br><br>
   
-      <div id="component_list_area" class="item_list"></div><br>
+      <div id="description_list_area" class="item_list"></div><br>
   
-      <span>Component:</span>
-      <span id="component" class="inline_parameter_value"></span>
-      <button id="button_delete_component" hidden>
-        <span class="font_base">Delete component</span>
+      <span id="description" class="inline_parameter_value"></span>
+      <button id="button_delete_description" hidden>
+        <span class="font_base">Delete</span>
       </button>
       <br>
-      <span>Default description:</span><br>
-      <textarea id="description" cols="80" rows="40" disabled></textarea>
+      <textarea id="description_text" cols="80" rows="40" disabled></textarea>
   
       <br><br>
       <button id="button_export">
